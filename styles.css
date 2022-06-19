@@ -1,0 +1,78 @@
+body {
+    background-color: rgb(250, 242, 240);
+    margin: 0px;
+}
+
+.sizeChange {
+    width: 10%;
+    transition: 250ms;
+}
+
+.sizeChange:hover {
+    animation-play-state: running;
+    animation-duration: 250ms;
+    animation-name: button-shadow;
+    width: 15%;
+}
+
+.site-infos {
+    display: flex;
+    width: 100%;
+    font-family:sans-serif;
+    background-image: linear-gradient(to bottom, rgb(2, 211, 2), rgb(0, 133, 0));
+    margin: 0px;
+    padding: 24px 16px;
+    justify-content: space-between;
+}
+
+.site-infos a {
+    display: contents;
+    float: left;
+    position: relative;
+}
+
+.site-infos a {
+    color:rgb(1, 1, 176);
+}
+
+.img-top {
+    z-index: 1;
+}
+
+.img-bottom {
+    z-index: 2;
+}
+
+.topnav {
+    background-image: linear-gradient(to bottom, rgb(1, 164, 1), rgb(1, 105, 1));
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    color:rgb(250, 242, 240);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: sans-serif;
+}
+
+.topnav a:hover{
+    background-image: linear-gradient(to bottom, rgb(230, 230, 255), rgb(171, 171, 196));
+    color: black;
+}
+
+@keyframes button-shadow {
+    from{
+        width: 10%;
+    }
+    to {
+        width: 15%;
+    }
+}
+
+@keyframes button-return {
+    from {width: 15%}
+    to {width: 10%}
+}
