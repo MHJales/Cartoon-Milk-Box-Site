@@ -3,21 +3,36 @@ body {
     margin: 0px;
 }
 
+.pages{
+    display: contents;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.pages div img:hover {
+    
+}
+
+.pages div img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
 .sizeChange {
-    width: 10%;
-    transition: 250ms;
+    width: 100%;
+    transition: 500ms;
 }
 
 .sizeChange:hover {
     animation-play-state: running;
-    animation-duration: 250ms;
-    animation-name: button-shadow;
-    width: 15%;
+    animation-duration: 500ms;
+    animation-name: button-grow;
+    width: 110%;
 }
 
 .site-infos {
     display: flex;
-    width: 100%;
     font-family:sans-serif;
     background-image: linear-gradient(to bottom, rgb(2, 211, 2), rgb(0, 133, 0));
     margin: 0px;
@@ -29,18 +44,17 @@ body {
     display: contents;
     float: left;
     position: relative;
-}
-
-.site-infos a {
     color:rgb(1, 1, 176);
+    align-items: center;
 }
 
-.img-top {
-    z-index: 1;
+.info-icon a img{
+    width: 100%;
 }
 
-.img-bottom {
-    z-index: 2;
+.info-icon h1 {
+    font-size: 8px;
+    text-align: center;
 }
 
 .topnav {
@@ -63,16 +77,20 @@ body {
     color: black;
 }
 
-@keyframes button-shadow {
+a.active {
+    background-image: linear-gradient(to bottom,rgb(1, 105, 1), rgb(1, 164, 1));
+}
+
+@keyframes button-grow {
     from{
-        width: 10%;
+        width: 100%;
     }
     to {
-        width: 15%;
+        width: 110%;
     }
 }
 
 @keyframes button-return {
-    from {width: 15%}
-    to {width: 10%}
+    from {width: 110%}
+    to {width: 100%}
 }
